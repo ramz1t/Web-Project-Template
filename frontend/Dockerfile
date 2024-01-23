@@ -1,4 +1,4 @@
-FROM node:15.13-alpine
+FROM node:18.16-alpine
 WORKDIR /react
 COPY package.json .
 RUN npm i --legacy-peer-deps

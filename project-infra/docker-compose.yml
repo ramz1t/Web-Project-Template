@@ -32,7 +32,7 @@ services:
     image: nginx:1.19.3
     restart: always
     ports:
-      - "80:80"
+      - "8241:8241"
     volumes:
       - ./nginx.conf:/etc/nginx/conf.d/default.conf
       - static_value:/var/html/static/

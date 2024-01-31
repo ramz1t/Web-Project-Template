@@ -1,0 +1,19 @@
+[
+  {
+    "model": "users.user",
+    "pk": 1,
+    "fields": {
+      "password": "pbkdf2_sha256$720000$1sQc6e2M3hQgGSSyiArsTt$/urxc3D3kmh4cMN67RHmXKVj2YoUchX+2xu9NTH0wb8=",
+      "last_login": null,
+      "is_superuser": true,
+      "first_name": "Aleksei",
+      "last_name": "Zavadskii",
+      "email": "a@a.ru",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2024-01-24T11:19:54.554Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  }
+]

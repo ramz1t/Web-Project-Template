@@ -2,16 +2,18 @@ version: '3.3'
 
 services:
   db:
-    image: postgres:13.0-alpine
+    image: postgres:16.1
     restart: always
     volumes:
       - /var/lib/postgresql/data/
     env_file:
-      - ./.env
+      - ../backend/.env
 
   web:
     build: ../backend/
     restart: always
+    environment:
+      - DOCKER_ENV=1
     volumes:
       # - data_value:/app/data/
       - static_value:/app/static/
@@ -19,7 +21,7 @@ services:
     depends_on:
       - db
     env_file:
-      - ./.env
+      - ../backend/.env
 
   frontend:
     build:
@@ -29,7 +31,7 @@ services:
       - react_build:/react/dist
 
   nginx:
-    image: nginx:1.19.3
+    image: nginx:1.25.3
     restart: always
     ports:
       - "8241:8241"
